@@ -1,0 +1,45 @@
+{
+  "registration": {
+    "first_name": {
+      "isLength": {
+        "errorMessage": "First name too short",
+        "options": { "min": 2 }
+      },
+      "trim": {
+        "options": [" "]
+      }
+    },
+    "last_name": {
+      "isLength": {
+        "errorMessage": "Last name too short",
+        "options": { "min": 2 }
+      },
+      "trim": {
+        "options": [" "]
+      }
+    },
+    "password": {
+      "isLength": {
+        "errorMessage": "password must be at least 7 characters long",
+        "options": { "min": 7 }
+      },
+      "matches": {
+        "errorMessage": "password must container at least 1 number character",
+        "pattern": "/^(?=.*d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{7,}$/i"
+      }
+    },
+    "email": {
+      "isEmail": {
+        "errorMessage": "invalid email address",
+        "options": {
+          "allow_display_name": false,
+          "allow_utf8_local_part": false,
+          "allow_ip_domain": false,
+          "require_tld": true,
+          "domain_specific_validation": true,
+          "ignore_max_length": false
+        }
+      }
+    }
+  }
+}

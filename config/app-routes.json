@@ -1,0 +1,19 @@
+{
+  "/": {
+    "name": "index",
+    "path": "index",
+    "pattern": "/"
+  },
+  "/faq": {
+    "name": "faq",
+    "path": "faq",
+    "pattern": "/faq",
+    "static": true
+  },
+  "/about": {
+    "name": "about",
+    "path": "about",
+    "pattern": "/about",
+    "static": true
+  }
+}

@@ -1,0 +1,40 @@
+/* external css, save will not auto-refresh */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* default is not inherit */
+}
+
+html {
+  /* this defines what 1rem is, the default for most browser is 16px, this is 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Tahoma, Roboto, sans-serif;
+  box-sizing: border-box;
+  background-color: #000;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.6rem; /* setting default font size here */
+}
+
+section {
+  margin: 2rem;
+}
+
+a,
+a:link,
+a:active,
+a:focus,
+a:visited {
+  color: #fbf7d7;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+a:hover {
+ text-decoration: underline;
+}
