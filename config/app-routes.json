@@ -5,15 +5,15 @@
     "pattern": "/"
   },
   "/faq": {
-    "name": "faq",
-    "path": "faq",
-    "pattern": "/faq",
+    "name": "counter",
+    "path": "counter",
+    "pattern": "/counter",
     "static": true
   },
   "/about": {
-    "name": "about",
-    "path": "about",
-    "pattern": "/about",
+    "name": "call_server",
+    "path": "call_server",
+    "pattern": "/call_server",
     "static": true
   }
 }
