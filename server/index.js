@@ -31,6 +31,6 @@ app.prepare().then(() => {
   const PORT = process.env.NODE_PORT || 3000;
 
   server.listen(PORT, () => {
-    console.log(`> Ready on http://localhost:${PORT}`);
+    console.log(`> Ready on http://0.0.0.0:${PORT}`);
   });
 });
