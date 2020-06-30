@@ -63,8 +63,6 @@ class IndexHtml extends Document {
         <link rel="manifest" href="site.webmanifest" />
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=2" />
         <link rel="apple-touch-icon" href="icon.png" />
-        <link rel="stylesheet" href="static/css/normalize.css" />
-        <link rel="stylesheet" href="static/css/main.css" />
       </Helmet>
     );
   }

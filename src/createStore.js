@@ -1,6 +1,7 @@
 import Immutable from 'immutable';
 import { createLogger } from 'redux-logger';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
@@ -40,14 +41,13 @@ export default (initialState = {}, context) => {
   const { isServer } = !!context ? context : false;
   const middlewares = createMiddlewares();
   const state = immutableChildren(initialState);
-  const composeEnhancers =
-    (!isServer &&
-      process.env.NODE_ENV === 'development' &&
-      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
-    compose;
+  const composeEnhancer = composeWithDevTools({
+    actionsBlacklist: {},
+    actionCreators: {}
+  });
   return createStore(
     rootReducer,
     state,
-    isServer ? applyMiddleware(...middlewares) : composeEnhancers(applyMiddleware(...middlewares))
+    isServer ? applyMiddleware(...middlewares) : composeEnhancer(applyMiddleware(...middlewares))
   );
 };

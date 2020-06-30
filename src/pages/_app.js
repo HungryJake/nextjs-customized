@@ -1,6 +1,8 @@
 import App from 'next/app';
 import React from 'react';
-import '../sass/main.sass';
+import '../styles/normalize.css';
+import '../styles/main.css';
+import '../styles/main.sass';
 import DynamicApp from '../components/App/Dynamic';
 import StaticApp from '../components/App/Static';
 import routeConfig from '../../config/app-routes.json';
