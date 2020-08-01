@@ -1,4 +1,4 @@
-const withFonts = require('nextjs-fonts');
+const withFonts = require('next-fonts');
 module.exports = withFonts({
   useFileSystemPublicRoutes: false,
   webpack(config, options) {
