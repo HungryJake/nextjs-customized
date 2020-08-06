@@ -8,12 +8,18 @@
     "name": "counter",
     "path": "counter",
     "pattern": "/counter",
-    "static": true
+    "static": false
   },
   "/about": {
     "name": "call_server",
     "path": "call_server",
     "pattern": "/call_server",
+    "static": false
+  },
+  "/contact": {
+    "name": "contact",
+    "path": "contact",
+    "pattern": "/contact",
     "static": true
   }
 }

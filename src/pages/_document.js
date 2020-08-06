@@ -46,33 +46,18 @@ class IndexHtml extends Document {
       .map((el) => this.props.helmet[el].toComponent());
   }
 
-  get helmetJsx() {
-    const title = 'My Awesome App';
-    const description = 'My Awesome App';
-    const themeColor = '#fafafa';
-    return (
-      <Helmet>
-        <title>{title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content={title} />
-        <base href="/" />
-        <meta charSet="utf-8" />
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content={themeColor} />
-        <link rel="manifest" href="site.webmanifest" />
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=2" />
-        <link rel="apple-touch-icon" href="icon.png" />
-      </Helmet>
-    );
-  }
-
   render() {
     return (
       <Html {...this.helmetHtmlAttrComponents}>
         <Head>
-          {this.helmetJsx}
           {this.helmetHeadComponents}
+          <base href="/" />
+          <meta charSet="utf-8" />
+          <meta name="description" content={this.description} key="description" />
+          <meta name="theme-color" content={this.themeColor} key="theme-color" />
+          <link rel="manifest" href="site.webmanifest" />
+          <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=2" />
+          <link rel="apple-touch-icon" href="icon.png" />
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />

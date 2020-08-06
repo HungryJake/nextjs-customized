@@ -1,7 +1,5 @@
 import App from 'next/app';
 import React from 'react';
-import '../styles/normalize.css';
-import '../styles/main.css';
 import '../styles/main.sass';
 import DynamicApp from '../components/App/Dynamic';
 import StaticApp from '../components/App/Static';

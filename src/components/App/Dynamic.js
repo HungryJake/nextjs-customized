@@ -1,8 +1,8 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import withRedux from 'next-redux-wrapper';
-import createStore from '../../createStore';
+import { Helmet } from 'react-helmet';
+import { createWrapper } from 'next-redux-wrapper';
 import { withRouter } from 'next/router';
+import createStore from '../../createStore';
 
 /**
  * DynamicApp Component
@@ -13,12 +13,16 @@ import { withRouter } from 'next/router';
  * @returns {*}
  * @constructor
  */
-const DynamicApp = ({ Component, pageProps, router, store }) => {
+const DynamicApp = ({ Component, pageProps, router }) => {
   return (
-    <Provider store={store}>
+    <>
+      <Helmet>
+        <title>Title for (Dynamic Pages)</title>
+        <meta property="og:title" content={'Title for (Dynamic Pages)'} />
+      </Helmet>
       <Component router={router} {...pageProps} />
-    </Provider>
+    </>
   );
 };
 
-export default withRedux(createStore)(withRouter(DynamicApp));
+export default createWrapper(createStore).withRedux(withRouter(DynamicApp));

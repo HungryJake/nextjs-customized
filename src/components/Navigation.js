@@ -36,6 +36,11 @@ class Navigation extends Component {
                 <a>Test Server API</a>
               </Link>
             </StyledNavItem>
+            <StyledNavItem>
+              <Link href="/contact">
+                <a>Contact(static)</a>
+              </Link>
+            </StyledNavItem>
           </StyleNavLeftSection>
           <StyledNavHome>
             <Link href="/">
