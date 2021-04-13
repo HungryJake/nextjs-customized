@@ -37,7 +37,7 @@ function immutableChildren(obj) {
   return state;
 }
 
-export default (initialState = {}, context) => {
+export default function ReduxStore(initialState = {}, context) {
   const { isServer } = !!context ? context : false;
   const middlewares = createMiddlewares();
   const state = immutableChildren(initialState);
@@ -50,4 +50,4 @@ export default (initialState = {}, context) => {
     state,
     isServer ? applyMiddleware(...middlewares) : composeEnhancer(applyMiddleware(...middlewares))
   );
-};
+}

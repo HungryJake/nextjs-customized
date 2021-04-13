@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { createWrapper } from 'next-redux-wrapper';
 import { withRouter } from 'next/router';
-import createStore from '../../createStore';
+import reduxStore from '../../reduxStore';
 
 /**
  * DynamicApp Component
@@ -25,4 +25,4 @@ const DynamicApp = ({ Component, pageProps, router }) => {
   );
 };
 
-export default createWrapper(createStore).withRedux(withRouter(DynamicApp));
+export default createWrapper(reduxStore).withRedux(withRouter(DynamicApp));

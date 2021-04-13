@@ -4,7 +4,7 @@ const defaultCounterState = {
   count: 1
 };
 
-export default function (state = defaultCounterState, action) {
+export default function counterReducer(state = defaultCounterState, action) {
   switch (action.type) {
     case COUNTER_INCREASE:
       return {
@@ -23,4 +23,4 @@ export default function (state = defaultCounterState, action) {
         ...state
       };
   }
-};
+}
